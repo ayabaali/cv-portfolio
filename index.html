@@ -9,162 +9,205 @@
             --primary-color: #2d3748;
             --accent-color: #6b46c1; 
             --bg-color: #f7fafc;
+            --text-color: #2d3748;
         }
 
         body {
-            font-family: 'Segoe UI', sans-serif;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             background-color: var(--bg-color);
             margin: 0;
             padding: 20px;
+            color: var(--text-color);
         }
 
         .cv-container {
-            max-width: 850px;
+            max-width: 900px;
             margin: 0 auto;
             background: white;
-            display: grid;
-            grid-template-columns: 30% 70%;
-            border-radius: 10px;
+            display: flex; /* Flexbox l-tansi9 l-afaqi */
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            border-radius: 8px;
             overflow: hidden;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
         }
 
+        /* Sidebar (Gauche) */
         .sidebar {
+            width: 30%;
             background-color: var(--primary-color);
             color: white;
-            padding: 25px;
+            padding: 30px 20px;
         }
 
-        .main-content { padding: 40px; }
+        .profile-img {
+            width: 120px;
+            height: 120px;
+            background: #cbd5e0;
+            border-radius: 50%;
+            margin: 0 auto 20px;
+            border: 3px solid var(--accent-color);
+        }
 
-        h1 { margin: 0; color: var(--primary-color); text-transform: uppercase; font-size: 2rem; }
-        .subtitle { color: var(--accent-color); font-weight: bold; margin-bottom: 20px; }
-
-        .section-title { 
-            font-size: 1.1rem; 
-            color: var(--primary-color); 
-            border-bottom: 2px solid #edf2f7; 
-            padding-bottom: 5px; 
-            margin: 20px 0 10px; 
+        .sidebar h2 {
+            font-size: 1.1rem;
+            border-bottom: 2px solid var(--accent-color);
+            padding-bottom: 5px;
+            margin-top: 25px;
             text-transform: uppercase;
         }
 
-        /* Zone Centres d'intérêt */
-        .interest-section {
-            background: #f8fafc;
-            padding: 15px;
-            border-radius: 8px;
-            border: 1px solid #e2e8f0;
+        .sidebar p, .sidebar li { font-size: 0.85rem; margin-bottom: 8px; list-style: none; }
+        .sidebar ul { padding: 0; }
+
+        /* Main Content (Droite) */
+        .main-content {
+            width: 70%;
+            padding: 40px;
         }
 
-        #interet-list { margin-bottom: 15px; }
+        .header h1 { margin: 0; font-size: 2.2rem; color: var(--primary-color); }
+        .header p { color: var(--accent-color); font-weight: bold; margin-bottom: 30px; }
 
-        .input-group {
+        .section-title {
+            font-size: 1.2rem;
+            color: var(--primary-color);
+            border-left: 4px solid var(--accent-color);
+            padding-left: 10px;
+            margin: 25px 0 15px;
+            text-transform: uppercase;
+            font-weight: bold;
+        }
+
+        /* Liste des Intérêts */
+        #interet-list { margin-bottom: 15px; padding-left: 20px; }
+        #interet-list li { margin-bottom: 5px; }
+
+        /* Style de la zone d'ajout */
+        .add-zone {
             display: flex;
             gap: 10px;
-            margin-bottom: 15px;
-        }
-
-        input {
-            flex: 1;
-            padding: 8px;
-            border: 1px solid #cbd5e0;
+            margin-top: 15px;
+            padding: 10px;
+            background: #f1f5f9;
             border-radius: 5px;
         }
 
-        .add-btn {
+        .add-zone input {
+            flex: 1;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        .btn-add {
             background: var(--accent-color);
             color: white;
             border: none;
             padding: 8px 15px;
-            border-radius: 5px;
+            border-radius: 4px;
             cursor: pointer;
         }
 
-        /* LE BOUTON DEMANDÉ */
-        .pdf-link-btn {
+        /* LE BOUTON SPÉCIAL (Celui qui posait problème) */
+        /* On utilise une classe spécifique pour ne pas toucher aux autres liens */
+        .pdf-download-button {
             display: inline-block;
-            width: 100%;
-            text-align: center;
-            background-color: #e53e3e; /* Rouge PDF */
-            color: white;
-            text-decoration: none;
-            padding: 10px;
-            border-radius: 5px;
+            margin-top: 20px;
+            padding: 12px 20px;
+            background-color: #e53e3e;
+            color: white !important; /* Force la couleur blanche */
+            text-decoration: none !important; /* Enlève le soulignement */
             font-weight: bold;
+            border-radius: 5px;
+            text-align: center;
             transition: 0.3s;
-            box-sizing: border-box;
         }
 
-        .pdf-link-btn:hover {
+        .pdf-download-button:hover {
             background-color: #c53030;
-            transform: translateY(-2px);
         }
 
-        @media (max-width: 768px) { .cv-container { grid-template-columns: 1fr; } }
+        @media (max-width: 768px) {
+            .cv-container { flex-direction: column; }
+            .sidebar, .main-content { width: 100%; }
+        }
     </style>
 </head>
 <body>
 
 <div class="cv-container">
     <aside class="sidebar">
-        <div style="width:100px; height:100px; background:#ddd; border-radius:50%; margin:0 auto 20px; border:3px solid var(--accent-color);"></div>
-        <h3>Contact</h3>
-        <p style="font-size:0.8rem;">
-            [cite_start]📞 0690794432 [cite: 8]<br>
-            [cite_start]✉️ baaliaya059@gmail.com [cite: 6]<br>
-            [cite_start]📍 Rabat [cite: 10]<br>
-            [cite_start]🎂 18 ANS [cite: 4]
-        </p>
-        <h3>Compétences</h3>
-        <ul style="font-size:0.8rem; padding-left:15px;">
-            [cite_start]<li>Bureautique [cite: 12]</li>
-            [cite_start]<li>Gestion de projet [cite: 14]</li>
+        <div class="profile-img"></div>
+        [cite_start]<h2>Contact [cite: 5, 7, 9]</h2>
+        [cite_start]<p>📞 0690794432 [cite: 8]</p>
+        [cite_start]<p>✉️ Ayab6388@gmail.com [cite: 6]</p>
+        [cite_start]<p>📍 Rabat [cite: 10]</p>
+        [cite_start]<p>🎂 18 ANS [cite: 4]</p>
+
+        [cite_start]<h2>Compétences [cite: 11]</h2>
+        <ul>
+            [cite_start]<li>Maitrise bureautique [cite: 12]</li>
+            [cite_start]<li>Gestion des projets [cite: 14]</li>
             [cite_start]<li>Esprit d'équipe [cite: 15]</li>
+            [cite_start]<li>Ponctuelle [cite: 16]</li>
+        </ul>
+
+        [cite_start]<h2>Langues [cite: 31]</h2>
+        <ul>
+            [cite_start]<li>Français: Courant [cite: 32]</li>
+            [cite_start]<li>Arabe: Maternel [cite: 33]</li>
+            [cite_start]<li>Anglais: Moyen [cite: 34]</li>
         </ul>
     </aside>
 
     <main class="main-content">
-        [cite_start]<h1>Aya Baali [cite: 1, 2]</h1>
-        [cite_start]<div class="subtitle">Étudiante en Marketing Digital [cite: 20]</div>
+        <div class="header">
+            [cite_start]<h1>Aya Baali [cite: 1, 2]</h1>
+            [cite_start]<p>Étudiante en Marketing Digital et Commercial [cite: 20]</p>
+        </div>
 
-        <div class="section-title">Profil</div>
-        [cite_start]<p style="font-size:0.9rem;">[cite: 20, 21, 22] Passionnée par le commerce et la comptabilité, je cherche un stage pour approfondir mes compétences.</p>
-
-        <div class="section-title">Formation</div>
-        <p style="font-size:0.9rem;">
-            [cite_start]<strong>2024-2025:</strong> Marketing Digital - EST Salé [cite: 25, 26]<br>
-            [cite_start]<strong>2023-2024:</strong> Bac Science Économie [cite: 24]
+        [cite_start]<div class="section-title">Profil [cite: 19]</div>
+        <p style="font-size: 0.95rem;">
+            [cite_start]Étudiante à l'École Supérieure de Technologie de Salé[cite: 20]. [cite_start]Motivée, sérieuse et à la recherche d'un stage[cite: 20]. 
+            [cite_start]Passionnée par le commerce et la comptabilité[cite: 21].
         </p>
 
-        <div class="section-title">Centres d'intérêt</div>
-        <div class="interest-section">
-            <ul id="interet-list">
-                [cite_start]<li>Voyage [cite: 28]</li>
-                [cite_start]<li>Sport [cite: 29]</li>
-                [cite_start]<li>Musique [cite: 30]</li>
-            </ul>
-
-            <div class="input-group">
-                <input type="text" id="userInput" placeholder="Ajouter un intérêt...">
-                <button class="add-btn" onclick="addNow()">+</button>
-            </div>
-
-            <a href="Cv_Aya_Baali.pdf" class="pdf-link-btn">
-                Cv_Aya_Baali.pdf
-            </a>
+        [cite_start]<div class="section-title">Formation [cite: 23]</div>
+        <div style="margin-bottom: 10px;">
+            [cite_start]<strong>• 1ére année Marketing Digital [cite: 25]</strong><br>
+            EST SALÉ | [cite_start]2024-2025 [cite: 26]
         </div>
+        <div>
+            [cite_start]<strong>• BAC Science Économie [cite: 24]</strong><br>
+            [cite_start]2023-2024 [cite: 24]
+        </div>
+
+        [cite_start]<div class="section-title">Centres d'intérêt [cite: 27]</div>
+        <ul id="interet-list">
+            [cite_start]<li>Voyage [cite: 28]</li>
+            [cite_start]<li>Sport [cite: 29]</li>
+            [cite_start]<li>Musique [cite: 30]</li>
+        </ul>
+
+        <div class="add-zone">
+            <input type="text" id="intInput" placeholder="Zid intérêt...">
+            <button class="btn-add" onclick="addItem()">Ajouter</button>
+        </div>
+
+        <a href="Cv_Aya_Baali.pdf" class="pdf-download-button">
+            📄 Cv_Aya_Baali.pdf
+        </a>
     </main>
 </div>
 
 <script>
-    function addNow() {
-        var val = document.getElementById("userInput").value;
+    function addItem() {
+        var input = document.getElementById("intInput");
+        var val = input.value;
         if(val.trim() !== "") {
             var li = document.createElement("li");
             li.textContent = val;
             document.getElementById("interet-list").appendChild(li);
-            document.getElementById("userInput").value = "";
+            input.value = "";
         }
     }
 </script>
