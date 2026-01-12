@@ -24,13 +24,13 @@
             max-width: 900px;
             margin: 0 auto;
             background: white;
-            display: flex; /* Flexbox l-tansi9 l-afaqi */
+            display: flex; /* Bach ykoun sidebar f lissar o lktiba f liman */
             box-shadow: 0 4px 15px rgba(0,0,0,0.1);
             border-radius: 8px;
             overflow: hidden;
         }
 
-        /* Sidebar (Gauche) */
+        /* Sidebar (Jiha l-issriya) */
         .sidebar {
             width: 30%;
             background-color: var(--primary-color);
@@ -58,13 +58,13 @@
         .sidebar p, .sidebar li { font-size: 0.85rem; margin-bottom: 8px; list-style: none; }
         .sidebar ul { padding: 0; }
 
-        /* Main Content (Droite) */
+        /* Main Content (Jiha l-imniya) */
         .main-content {
             width: 70%;
             padding: 40px;
         }
 
-        .header h1 { margin: 0; font-size: 2.2rem; color: var(--primary-color); }
+        .header h1 { margin: 0; font-size: 2.2rem; color: var(--primary-color); text-transform: uppercase; }
         .header p { color: var(--accent-color); font-weight: bold; margin-bottom: 30px; }
 
         .section-title {
@@ -81,7 +81,7 @@
         #interet-list { margin-bottom: 15px; padding-left: 20px; }
         #interet-list li { margin-bottom: 5px; }
 
-        /* Style de la zone d'ajout */
+        /* Zone d'ajout */
         .add-zone {
             display: flex;
             gap: 10px;
@@ -107,22 +107,20 @@
             cursor: pointer;
         }
 
-        /* LE BOUTON SPÉCIAL (Celui qui posait problème) */
-        /* On utilise une classe spécifique pour ne pas toucher aux autres liens */
-        .pdf-download-button {
+        /* BOUTON PDF (M3ZOOL BACH MAYKHRB9CH L-CV) */
+        .pdf-action-link {
             display: inline-block;
             margin-top: 20px;
             padding: 12px 20px;
-            background-color: #e53e3e;
+            background-color: #e53e3e; /* Loun l-PDF */
             color: white !important; /* Force la couleur blanche */
-            text-decoration: none !important; /* Enlève le soulignement */
+            text-decoration: none !important; /* Sans soulignement */
             font-weight: bold;
             border-radius: 5px;
             text-align: center;
-            transition: 0.3s;
         }
 
-        .pdf-download-button:hover {
+        .pdf-action-link:hover {
             background-color: #c53030;
         }
 
@@ -137,63 +135,45 @@
 <div class="cv-container">
     <aside class="sidebar">
         <div class="profile-img"></div>
-        [cite_start]<h2>Contact [cite: 5, 7, 9]</h2>
-        [cite_start]<p>📞 0690794432 [cite: 8]</p>
-        [cite_start]<p>✉️ Ayab6388@gmail.com [cite: 6]</p>
-        [cite_start]<p>📍 Rabat [cite: 10]</p>
-        [cite_start]<p>🎂 18 ANS [cite: 4]</p>
-
-        [cite_start]<h2>Compétences [cite: 11]</h2>
+        <h2>Contact</h2>
+        <p>📞 0690794432</p> <p>✉️ Ayab6388@gmail.com</p> <p>📍 Rabat</p> <p>🎂 18 ANS</p> <h2>Compétences</h2>
         <ul>
-            [cite_start]<li>Maitrise bureautique [cite: 12]</li>
-            [cite_start]<li>Gestion des projets [cite: 14]</li>
-            [cite_start]<li>Esprit d'équipe [cite: 15]</li>
-            [cite_start]<li>Ponctuelle [cite: 16]</li>
-        </ul>
+            <li>Maitrise bureautique (Word, PPT)</li> <li>Gestion des projets</li> <li>Esprit d'équipe</li> <li>Ponctuelle & Flexible</li> </ul>
 
-        [cite_start]<h2>Langues [cite: 31]</h2>
+        <h2>Langues</h2>
         <ul>
-            [cite_start]<li>Français: Courant [cite: 32]</li>
-            [cite_start]<li>Arabe: Maternel [cite: 33]</li>
-            [cite_start]<li>Anglais: Moyen [cite: 34]</li>
-        </ul>
+            <li>Français: Courant</li> <li>Arabe: Maternel</li> <li>Anglais: Moyen</li> </ul>
     </aside>
 
     <main class="main-content">
         <div class="header">
-            [cite_start]<h1>Aya Baali [cite: 1, 2]</h1>
-            [cite_start]<p>Étudiante en Marketing Digital et Commercial [cite: 20]</p>
-        </div>
+            <h1>Aya Baali</h1> <p>Étudiante en Marketing Digital et Commercial</p> </div>
 
-        [cite_start]<div class="section-title">Profil [cite: 19]</div>
+        <div class="section-title">Profil</div>
         <p style="font-size: 0.95rem;">
-            [cite_start]Étudiante à l'École Supérieure de Technologie de Salé[cite: 20]. [cite_start]Motivée, sérieuse et à la recherche d'un stage[cite: 20]. 
-            [cite_start]Passionnée par le commerce et la comptabilité[cite: 21].
+            Étudiante à l'EST de Salé, motivée et dynamique[cite: 20]. Passionnée par le commerce et la comptabilité, je souhaite contribuer activement aux missions d'une entreprise[cite: 21].
         </p>
 
-        [cite_start]<div class="section-title">Formation [cite: 23]</div>
+        <div class="section-title">Formation</div>
         <div style="margin-bottom: 10px;">
-            [cite_start]<strong>• 1ére année Marketing Digital [cite: 25]</strong><br>
-            EST SALÉ | [cite_start]2024-2025 [cite: 26]
+            <strong>• 1ére année Marketing Digital</strong><br>
+            EST SALÉ | 2024-2025 [cite: 25, 26]
         </div>
         <div>
-            [cite_start]<strong>• BAC Science Économie [cite: 24]</strong><br>
-            [cite_start]2023-2024 [cite: 24]
+            <strong>• BAC Science Économie</strong><br>
+            2023-2024 [cite: 24]
         </div>
 
-        [cite_start]<div class="section-title">Centres d'intérêt [cite: 27]</div>
+        <div class="section-title">Centres d'intérêt</div>
         <ul id="interet-list">
-            [cite_start]<li>Voyage [cite: 28]</li>
-            [cite_start]<li>Sport [cite: 29]</li>
-            [cite_start]<li>Musique [cite: 30]</li>
-        </ul>
+            <li>Voyage</li> <li>Sport</li> <li>Musique</li> </ul>
 
         <div class="add-zone">
             <input type="text" id="intInput" placeholder="Zid intérêt...">
             <button class="btn-add" onclick="addItem()">Ajouter</button>
         </div>
 
-        <a href="Cv_Aya_Baali.pdf" class="pdf-download-button">
+        <a href="Cv_Aya_Baali.pdf" class="pdf-action-link">
             📄 Cv_Aya_Baali.pdf
         </a>
     </main>
