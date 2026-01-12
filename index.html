@@ -1,9 +1,9 @@
-<!DOCTYPE html>
+!DOCTYPE html>
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CV - Aya Baali</title>
+    <title>CV Aya Baali</title>
     <style>
         :root {
             --primary-color: #2d3748;
@@ -24,13 +24,13 @@
             max-width: 900px;
             margin: 0 auto;
             background: white;
-            display: flex; /* Bach ykoun sidebar f lissar o lktiba f liman */
+            display: flex;
             box-shadow: 0 4px 15px rgba(0,0,0,0.1);
             border-radius: 8px;
             overflow: hidden;
         }
 
-        /* Sidebar (Jiha l-issriya) */
+        /* Sidebar - Jiha lissriya */
         .sidebar {
             width: 30%;
             background-color: var(--primary-color);
@@ -38,13 +38,18 @@
             padding: 30px 20px;
         }
 
-        .profile-img {
+        .profile-img-placeholder {
             width: 120px;
             height: 120px;
             background: #cbd5e0;
             border-radius: 50%;
             margin: 0 auto 20px;
             border: 3px solid var(--accent-color);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            color: #4a5568;
         }
 
         .sidebar h2 {
@@ -58,14 +63,14 @@
         .sidebar p, .sidebar li { font-size: 0.85rem; margin-bottom: 8px; list-style: none; }
         .sidebar ul { padding: 0; }
 
-        /* Main Content (Jiha l-imniya) */
+        /* Main Content - Jiha limniya */
         .main-content {
             width: 70%;
             padding: 40px;
         }
 
         .header h1 { margin: 0; font-size: 2.2rem; color: var(--primary-color); text-transform: uppercase; }
-        .header p { color: var(--accent-color); font-weight: bold; margin-bottom: 30px; }
+        .header p { color: var(--accent-color); font-weight: bold; margin-bottom: 30px; font-size: 1.1rem; }
 
         .section-title {
             font-size: 1.2rem;
@@ -77,15 +82,13 @@
             font-weight: bold;
         }
 
-        /* Liste des Intérêts */
-        #interet-list { margin-bottom: 15px; padding-left: 20px; }
-        #interet-list li { margin-bottom: 5px; }
+        .content-text { font-size: 0.95rem; line-height: 1.6; margin-bottom: 15px; }
 
-        /* Zone d'ajout */
+        /* Zone d'ajout dynamique */
         .add-zone {
             display: flex;
             gap: 10px;
-            margin-top: 15px;
+            margin: 15px 0;
             padding: 10px;
             background: #f1f5f9;
             border-radius: 5px;
@@ -105,19 +108,20 @@
             padding: 8px 15px;
             border-radius: 4px;
             cursor: pointer;
+            font-weight: bold;
         }
 
-        /* BOUTON PDF (M3ZOOL BACH MAYKHRB9CH L-CV) */
+        /* BOUTON PDF - L-code li derti */
         .pdf-action-link {
             display: inline-block;
-            margin-top: 20px;
-            padding: 12px 20px;
-            background-color: #e53e3e; /* Loun l-PDF */
-            color: white !important; /* Force la couleur blanche */
-            text-decoration: none !important; /* Sans soulignement */
+            margin-top: 15px;
+            padding: 12px 25px;
+            background-color: #e53e3e; /* Loun hmer dial PDF */
+            color: white !important;
+            text-decoration: none !important;
             font-weight: bold;
             border-radius: 5px;
-            text-align: center;
+            transition: background 0.3s;
         }
 
         .pdf-action-link:hover {
@@ -133,46 +137,71 @@
 <body>
 
 <div class="cv-container">
+    <!-- SIDEBAR -->
     <aside class="sidebar">
-        <div class="profile-img"></div>
+        <div class="profile-img-placeholder">PHOTO</div>
+        
         <h2>Contact</h2>
-        <p>📞 0690794432</p> <p>✉️ Ayab6388@gmail.com</p> <p>📍 Rabat</p> <p>🎂 18 ANS</p> <h2>Compétences</h2>
+        <p>📞 0690794432</p>
+        <p>✉️ Ayab6388@gmail.com</p>
+        <p>📍 Rue 55 N 51 hay el farah, Rabat</p>
+        <p>🎂 18 ANS</p>
+
+        <h2>Compétences</h2>
         <ul>
-            <li>Maitrise bureautique (Word, PPT)</li> <li>Gestion des projets</li> <li>Esprit d'équipe</li> <li>Ponctuelle & Flexible</li> </ul>
+            <li>Maitrise de la bureautique (Word, PPT)</li>
+            <li>Gestion des projets</li>
+            <li>Esprit d'équipe</li>
+            <li>Ponctuelle & Flexible</li>
+            <li>Amicale</li>
+        </ul>
 
         <h2>Langues</h2>
         <ul>
-            <li>Français: Courant</li> <li>Arabe: Maternel</li> <li>Anglais: Moyen</li> </ul>
+            <li>Français: Courant</li>
+            <li>Arabe: Maternel</li>
+            <li>Anglais: Moyen</li>
+        </ul>
     </aside>
 
+    <!-- MAIN CONTENT -->
     <main class="main-content">
         <div class="header">
-            <h1>Aya Baali</h1> <p>Étudiante en Marketing Digital et Commercial</p> </div>
+            <h1>AYA BAALI</h1>
+            <p>Étudiante en Marketing Digital et Commercial</p>
+        </div>
 
         <div class="section-title">Profil</div>
-        <p style="font-size: 0.95rem;">
-            Étudiante à l'EST de Salé, motivée et dynamique[cite: 20]. Passionnée par le commerce et la comptabilité, je souhaite contribuer activement aux missions d'une entreprise[cite: 21].
+        <p class="content-text">
+            Étudiante en deuxiéme année de marketing digital et commercial à l'École Supérieure de Technologie de Salé. 
+            Personne motivée, sérieuse et dynamique, à la recherche d'un stage opérationnel pour approfondir ses compétences sur le terrain. 
+            Passionnée par les domaines du commerce et de la comptabilité.
         </p>
 
         <div class="section-title">Formation</div>
-        <div style="margin-bottom: 10px;">
-            <strong>• 1ére année Marketing Digital</strong><br>
-            EST SALÉ | 2024-2025 [cite: 25, 26]
+        <div class="content-text">
+            <strong>• 1ére année Marketing Digital et Commercial</strong><br>
+            EST SALÉ | 2024-2025
         </div>
-        <div>
+        <div class="content-text">
             <strong>• BAC Science Économie</strong><br>
-            2023-2024 [cite: 24]
+            2023-2024
         </div>
 
         <div class="section-title">Centres d'intérêt</div>
-        <ul id="interet-list">
-            <li>Voyage</li> <li>Sport</li> <li>Musique</li> </ul>
+        <ul id="interet-list" style="padding-left: 20px; margin-bottom: 20px;">
+            <li>Voyage</li>
+            <li>Sport</li>
+            <li>Musique</li>
+        </ul>
 
+        <!-- Zone d'ajout d'intérêt -->
         <div class="add-zone">
-            <input type="text" id="intInput" placeholder="Zid intérêt...">
+            <input type="text" id="intInput" placeholder="Zid intérêt khor...">
             <button class="btn-add" onclick="addItem()">Ajouter</button>
         </div>
 
+        <!-- BOUTON PDF (Taht le centre d'intérêt) -->
         <a href="Cv_Aya_Baali.pdf" class="pdf-action-link">
             📄 Cv_Aya_Baali.pdf
         </a>
@@ -190,6 +219,13 @@
             input.value = "";
         }
     }
+
+    // Permettre l'ajout avec la touche Entrée
+    document.getElementById("intInput").addEventListener("keypress", function(e) {
+        if (e.key === "Enter") {
+            addItem();
+        }
+    });
 </script>
 
 </body>
