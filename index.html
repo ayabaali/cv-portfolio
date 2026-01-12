@@ -1,225 +1,208 @@
-<!DOCTYPE html
+<!DOCTYPE html>
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CV Aya Baali - 2ème Année</title>
+    <title>Aya Baali - Portfolio Digital</title>
+    <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        :root {
-            --primary-color: #2d3748;
-            --accent-color: #6b46c1; 
-            --bg-color: #f7fafc;
-            --text-color: #2d3748;
-        }
-
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+        
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: var(--bg-color);
-            margin: 0;
-            padding: 20px;
-            color: var(--text-color);
+            font-family: 'Poppins', sans-serif;
+            background: #0f172a;
+            color: #f1f5f9;
         }
 
-        .cv-container {
-            max-width: 900px;
-            margin: 0 auto;
-            background: white;
-            display: flex;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-            border-radius: 8px;
-            overflow: hidden;
+        .glass-card {
+            background: rgba(30, 41, 59, 0.7);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 24px;
         }
 
-        /* Sidebar - Jiha lissriya */
-        .sidebar {
-            width: 30%;
-            background-color: var(--primary-color);
-            color: white;
-            padding: 30px 20px;
+        .gradient-text {
+            background: linear-gradient(135deg, #a78bfa, #f472b6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
         }
 
-        .profile-img-placeholder {
-            width: 120px;
-            height: 120px;
-            background: #cbd5e0;
-            border-radius: 50%;
-            margin: 0 auto 20px;
-            border: 3px solid var(--accent-color);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-weight: bold;
-            color: #4a5568;
+        .skill-badge {
+            background: rgba(139, 92, 246, 0.1);
+            border: 1px solid rgba(139, 92, 246, 0.3);
+            transition: all 0.3s ease;
         }
 
-        .sidebar h2 {
-            font-size: 1.1rem;
-            border-bottom: 2px solid var(--accent-color);
-            padding-bottom: 5px;
-            margin-top: 25px;
-            text-transform: uppercase;
+        .skill-badge:hover {
+            background: rgba(139, 92, 246, 0.2);
+            transform: translateY(-2px);
         }
 
-        .sidebar p, .sidebar li { font-size: 0.85rem; margin-bottom: 8px; list-style: none; }
-        .sidebar ul { padding: 0; }
-
-        /* Main Content - Jiha limniya */
-        .main-content {
-            width: 70%;
-            padding: 40px;
+        .timeline-dot {
+            width: 12px;
+            height: 12px;
+            background: #a78bfa;
+            box-shadow: 0 0 10px #a78bfa;
         }
 
-        .header h1 { margin: 0; font-size: 2.2rem; color: var(--primary-color); text-transform: uppercase; }
-        .header p { color: var(--accent-color); font-weight: bold; margin-bottom: 30px; font-size: 1.1rem; }
-
-        .section-title {
-            font-size: 1.2rem;
-            color: var(--primary-color);
-            border-left: 4px solid var(--accent-color);
-            padding-left: 10px;
-            margin: 25px 0 15px;
-            text-transform: uppercase;
-            font-weight: bold;
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0px); }
         }
 
-        .content-text { font-size: 0.95rem; line-height: 1.6; margin-bottom: 15px; }
-
-        /* Zone d'ajout d'intérêt */
-        .add-zone {
-            display: flex;
-            gap: 10px;
-            margin: 15px 0;
-            padding: 10px;
-            background: #f1f5f9;
-            border-radius: 5px;
-        }
-
-        .add-zone input {
-            flex: 1;
-            padding: 8px;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-        }
-
-        .btn-add {
-            background: var(--accent-color);
-            color: white;
-            border: none;
-            padding: 8px 15px;
-            border-radius: 4px;
-            cursor: pointer;
-            font-weight: bold;
-        }
-
-        /* BOUTON PDF (Spécifique) */
-        .pdf-action-link {
-            display: inline-block;
-            margin-top: 20px;
-            padding: 12px 25px;
-            background-color: #e53e3e; /* Loun PDF */
-            color: white !important;
-            text-decoration: none !important;
-            font-weight: bold;
-            border-radius: 5px;
-            transition: background 0.3s;
-            text-align: center;
-        }
-
-        .pdf-action-link:hover {
-            background-color: #c53030;
-        }
-
-        @media (max-width: 768px) {
-            .cv-container { flex-direction: column; }
-            .sidebar, .main-content { width: 100%; }
-        }
+        .floating { animation: float 4s ease-in-out infinite; }
     </style>
 </head>
-<body>
+<body class="p-4 md:p-8">
 
-<div class="cv-container">
-    <!-- BARRE LATERALE -->
-    <aside class="sidebar">
-        <div class="profile-img-placeholder">PHOTO</div>
+    <div class="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-8">
         
-        <h2>Contact</h2>
-        <p>📞 0690794432</p>
-        <p>✉️ baaliaya059@gmail.com</p>
-        <p>📍 Rabat</p>
-        <p>🎂 19 ANS</p>
+        <!-- Sidebar Créative -->
+        <aside class="lg:col-span-4 space-y-6">
+            <div class="glass-card p-8 text-center floating">
+                <!-- Photo de Profil -->
+                <div class="w-40 h-40 mx-auto mb-6 relative">
+                    <div class="absolute inset-0 bg-gradient-to-tr from-violet-500 to-fuchsia-500 rounded-full blur-sm opacity-50"></div>
+                    <img src="WhatsApp Image 2026-01-10 at 23.55.45.jpeg" alt="Photo de Aya Baali" class="w-full h-full object-cover rounded-full border-4 border-violet-500 relative z-10 shadow-2xl">
+                </div>
 
-        <h2>Compétences</h2>
-        <ul>
-            <li>Maîtrise bureautique (Office)</li>
-            <li>Gestion de projets digitaux</li>
-            <li>Esprit d'équipe</li>
-            <li>Ponctualité & Rigueur</li>
-            <li>Adaptabilité</li>
-        </ul>
+                <h1 class="text-3xl font-bold mb-1">Aya Baali</h1>
+                <p class="gradient-text font-semibold uppercase tracking-wider text-sm mb-6">Marketing Digital & Commercial</p>
+                
+                <div class="space-y-4 text-left text-sm">
+                    <div class="flex items-center gap-3 text-slate-400">
+                        <span class="p-2 bg-slate-800 rounded-lg">📧</span>
+                        <span>Ayab6388@gmail.com</span>
+                    </div>
+                    <div class="flex items-center gap-3 text-slate-400">
+                        <span class="p-2 bg-slate-800 rounded-lg">📞</span>
+                        <span>0690794432</span>
+                    </div>
+                    <div class="flex items-center gap-3 text-slate-400">
+                        <span class="p-2 bg-slate-800 rounded-lg">📍</span>
+                        <span>Rabat, Maroc</span>
+                    </div>
+                    <!-- Lien Kaggle -->
+                    <a href="https://www.kaggle.com/ayabaali" target="_blank" class="flex items-center gap-3 text-slate-400 hover:text-violet-400 transition-colors">
+                        <span class="p-2 bg-slate-800 rounded-lg">📊</span>
+                        <span>Aya Baali | Kaggle</span>
+                    </a>
+                </div>
+            </div>
 
-        <h2>Langues</h2>
-        <ul>
-            <li>Français : Courant</li>
-            <li>Arabe : Maternel</li>
-            <li>Anglais : Moyen</li>
-        </ul>
-    </aside>
+            <div class="glass-card p-8">
+                <h3 class="text-xl font-semibold mb-6 flex items-center gap-2">
+                    <span class="text-violet-400">✦</span> Compétences
+                </h3>
+                <div class="flex flex-wrap gap-2">
+                    <span class="skill-badge px-4 py-2 rounded-full text-xs">Office 365</span>
+                    <span class="skill-badge px-4 py-2 rounded-full text-xs">Stratégie Digitale</span>
+                    <span class="skill-badge px-4 py-2 rounded-full text-xs">Gestion de Projet</span>
+                    <span class="skill-badge px-4 py-2 rounded-full text-xs">Relation Client</span>
+                    <span class="skill-badge px-4 py-2 rounded-full text-xs">Social Media</span>
+                    <span class="skill-badge px-4 py-2 rounded-full text-xs">E-commerce</span>
+                </div>
+            </div>
 
-    <!-- CONTENU PRINCIPAL -->
-    <main class="main-content">
-        <div class="header">
-            <h1>AYA BAALI</h1>
-            <p>Étudiante en 2ème année Marketing Digital et Commercial</p>
-        </div>
+            <div class="glass-card p-8">
+                <h3 class="text-xl font-semibold mb-6 flex items-center gap-2">
+                    <span class="text-violet-400">✦</span> Langues
+                </h3>
+                <div class="space-y-4">
+                    <div>
+                        <div class="flex justify-between text-xs mb-1"><span>Arabe</span><span>Maternel</span></div>
+                        <div class="w-full bg-slate-800 h-1.5 rounded-full"><div class="bg-violet-500 h-full w-full rounded-full"></div></div>
+                    </div>
+                    <div>
+                        <div class="flex justify-between text-xs mb-1"><span>Français</span><span>Courant</span></div>
+                        <div class="w-full bg-slate-800 h-1.5 rounded-full"><div class="bg-violet-500 h-full w-[90%] rounded-full"></div></div>
+                    </div>
+                    <div>
+                        <div class="flex justify-between text-xs mb-1"><span>Anglais</span><span>Moyen</span></div>
+                        <div class="w-full bg-slate-800 h-1.5 rounded-full"><div class="bg-violet-500 h-full w-[60%] rounded-full"></div></div>
+                    </div>
+                </div>
+            </div>
+        </aside>
 
-        <div class="section-title">Profil</div>
-        <p class="content-text">
-            Actuellement étudiante en deuxième année de Marketing Digital et Commercial à l'École Supérieure de Technologie de Salé. 
-            Je suis passionnée par l'évolution des stratégies commerciales et l'impact du numérique sur le marché actuel. 
-            Mon parcours académique me permet de consolider mes connaissances en gestion, marketing et outils technologiques. 
-            Sérieuse et dotée d'un bon esprit d'équipe, je m'investis pleinement dans mes projets académiques pour atteindre mes objectifs professionnels futurs.
-        </p>
+        <!-- Contenu Principal -->
+        <main class="lg:col-span-8 space-y-8">
+            
+            <section class="glass-card p-8 relative overflow-hidden">
+                <div class="absolute -right-10 -top-10 w-40 h-40 bg-violet-600/20 blur-3xl rounded-full"></div>
+                <h3 class="text-2xl font-bold mb-4">À propos de moi</h3>
+                <p class="text-slate-400 leading-relaxed">
+                    Actuellement étudiante en deuxième année de Marketing Digital et Commercial à l'EST de Salé. 
+                    Je me passionne pour la création de valeur à travers les outils numériques. Mon approche combine rigueur analytique et créativité pour répondre aux nouveaux défis du marché digital.
+                </p>
+            </section>
 
-        <div class="section-title">Formation</div>
-        <div class="content-text">
-            <strong>• 2ème année Marketing Digital et Commercial</strong><br>
-            EST SALÉ | 2025 - Présent
-        </div>
-        <div class="content-text">
-            <strong>• 1ère année Marketing Digital et Commercial</strong><br>
-            EST SALÉ | 2024 - 2025
-        </div>
-        <div class="content-text">
-            <strong>• BAC Science Économie</strong><br>
-            2023 - 2024
-        </div>
+            <section class="glass-card p-8">
+                <h3 class="text-2xl font-bold mb-8">Parcours Académique</h3>
+                <div class="space-y-8 relative before:content-[''] before:absolute before:left-[5px] before:top-2 before:bottom-2 before:w-[2px] before:bg-slate-800">
+                    
+                    <div class="pl-8 relative">
+                        <div class="timeline-dot absolute left-0 top-2 rounded-full"></div>
+                        <span class="text-violet-400 text-sm font-bold">2025 - Présent</span>
+                        <h4 class="text-lg font-bold">2ème année Marketing Digital et Commercial</h4>
+                        <p class="text-slate-500 text-sm">EST SALÉ</p>
+                    </div>
 
-        <div class="section-title">Centres d'intérêt</div>
-        <ul id="interet-list" style="padding-left: 20px; margin-bottom: 20px;">
-            <li>Voyage</li>
-            <li>Sport</li>
-            <li>Musique</li>
-        </ul>
+                    <div class="pl-8 relative">
+                        <div class="timeline-dot absolute left-0 top-2 rounded-full"></div>
+                        <span class="text-violet-400 text-sm font-bold">2024 - 2025</span>
+                        <h4 class="text-lg font-bold">1ère année Marketing Digital et Commercial</h4>
+                        <p class="text-slate-500 text-sm">EST SALÉ</p>
+                    </div>
 
-        <!-- LE BOUTON DEMANDÉ -->
-        <a href="CV_Aya_Baali.pdf" class="pdf-action-link">
-            📄 CV_Aya_Baali.pdf
-        </a>
-    </main>
-</div>
+                    <div class="pl-8 relative">
+                        <div class="timeline-dot absolute left-0 top-2 rounded-full"></div>
+                        <span class="text-violet-400 text-sm font-bold">2023 - 2024</span>
+                        <h4 class="text-lg font-bold">Baccalauréat en Sciences Économiques</h4>
+                        <p class="text-slate-500 text-sm">Rabat</p>
+                    </div>
+                </div>
+            </section>
 
-<script>
-    function addItem() {
-        var input = document.getElementById("intInput");
-        var val = input.value;
-        if(val.trim() !== "") {
-            var li = document.createElement("li");
-            li.textContent = val;
-            document.getElementById("interet-list").appendChild(li);
-            input.value = "";
-        }
-    }
-</script>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <section class="glass-card p-8">
+                    <h3 class="text-xl font-bold mb-6">Passions</h3>
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="bg-slate-800/50 p-4 rounded-xl text-center">
+                            <span class="text-2xl block mb-2">✈️</span>
+                            <span class="text-xs uppercase tracking-widest">Voyage</span>
+                        </div>
+                        <div class="bg-slate-800/50 p-4 rounded-xl text-center">
+                            <span class="text-2xl block mb-2">🏃‍♀️</span>
+                            <span class="text-xs uppercase tracking-widest">Sport</span>
+                        </div>
+                        <div class="bg-slate-800/50 p-4 rounded-xl text-center">
+                            <span class="text-2xl block mb-2">🎵</span>
+                            <span class="text-xs uppercase tracking-widest">Musique</span>
+                        </div>
+                        <div class="bg-slate-800/50 p-4 rounded-xl text-center">
+                            <span class="text-2xl block mb-2">📸</span>
+                            <span class="text-xs uppercase tracking-widest">Digital</span>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="glass-card p-8 flex flex-col justify-center items-center text-center">
+                    <h3 class="text-xl font-bold mb-4">Besoin du PDF ?</h3>
+                    <p class="text-sm text-slate-400 mb-6 text-center">Téléchargez la version imprimable de mon CV en un clic.</p>
+                    <a href="CV_Aya_Baali.pdf" download="CV_Aya_Baali.pdf" class="w-full py-4 bg-gradient-to-r from-violet-600 to-fuchsia-600 rounded-xl font-bold hover:shadow-[0_0_20px_rgba(139,92,246,0.5)] transition-all flex items-center justify-center gap-2">
+                        📄 CV_Aya_Baali.pdf
+                    </a>
+                </section>
+            </div>
+
+        </main>
+    </div>
+
+    <footer class="text-center mt-12 text-slate-500 text-xs">
+        <p>&copy; 2025 Aya Baali - Conçu avec créativité</p>
+    </footer>
 
 </body>
 </html>
