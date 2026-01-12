@@ -1,244 +1,173 @@
-u!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CV - Aya Baali</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
+        :root {
+            --primary-color: #2d3748;
+            --accent-color: #6b46c1; 
+            --bg-color: #f7fafc;
+        }
+
         body {
-            font-family: 'Poppins', sans-serif;
-            background-color: #f3f4f6;
+            font-family: 'Segoe UI', sans-serif;
+            background-color: var(--bg-color);
+            margin: 0;
+            padding: 20px;
         }
-        .bg-primary {
-            background-color: #2c3e50;
+
+        .cv-container {
+            max-width: 850px;
+            margin: 0 auto;
+            background: white;
+            display: grid;
+            grid-template-columns: 30% 70%;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
         }
-        .text-primary {
-            color: #2c3e50;
+
+        .sidebar {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 25px;
         }
-        .bg-accent {
-            background-color: #3498db;
+
+        .main-content { padding: 40px; }
+
+        h1 { margin: 0; color: var(--primary-color); text-transform: uppercase; font-size: 2rem; }
+        .subtitle { color: var(--accent-color); font-weight: bold; margin-bottom: 20px; }
+
+        .section-title { 
+            font-size: 1.1rem; 
+            color: var(--primary-color); 
+            border-bottom: 2px solid #edf2f7; 
+            padding-bottom: 5px; 
+            margin: 20px 0 10px; 
+            text-transform: uppercase;
         }
-        .text-accent {
-            color: #3498db;
+
+        /* Zone Centres d'intérêt */
+        .interest-section {
+            background: #f8fafc;
+            padding: 15px;
+            border-radius: 8px;
+            border: 1px solid #e2e8f0;
         }
-        .sidebar-gradient {
-            background: linear-gradient(180deg, #2c3e50 0%, #34495e 100%);
+
+        #interet-list { margin-bottom: 15px; }
+
+        .input-group {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 15px;
         }
+
+        input {
+            flex: 1;
+            padding: 8px;
+            border: 1px solid #cbd5e0;
+            border-radius: 5px;
+        }
+
+        .add-btn {
+            background: var(--accent-color);
+            color: white;
+            border: none;
+            padding: 8px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        /* LE BOUTON DEMANDÉ */
+        .pdf-link-btn {
+            display: inline-block;
+            width: 100%;
+            text-align: center;
+            background-color: #e53e3e; /* Rouge PDF */
+            color: white;
+            text-decoration: none;
+            padding: 10px;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: 0.3s;
+            box-sizing: border-box;
+        }
+
+        .pdf-link-btn:hover {
+            background-color: #c53030;
+            transform: translateY(-2px);
+        }
+
+        @media (max-width: 768px) { .cv-container { grid-template-columns: 1fr; } }
     </style>
 </head>
-<body class="text-gray-800">
+<body>
 
-    <div class="max-w-5xl mx-auto my-10 bg-white shadow-2xl overflow-hidden rounded-lg">
-        <div class="flex flex-col md:flex-row">
-            
-            <!-- Sidebar (Informations personnelles) -->
-            <div class="md:w-1/3 sidebar-gradient text-white p-8">
-                <div class="flex flex-col items-center">
-                    <!-- Placeholder pour la photo -->
-                    <div class="w-32 h-32 rounded-full bg-gray-300 border-4 border-white mb-6 flex items-center justify-center overflow-hidden">
-                        <i class="fas fa-user text-4xl text-gray-500"></i>
-                        <!-- Remplacez la ligne ci-dessus par votre image : <img src="votre-photo.jpg" class="w-full h-full object-cover" alt="Aya Baali"> -->
-                    </div>
-                    <h1 class="text-2xl font-bold text-center uppercase tracking-wider">Aya Baali</h1>
-                    <p class="text-gray-300 mt-2 font-medium">Étudiante en Marketing Digital</p>
-                    <div class="w-10 h-1 bg-accent mt-4 mb-6 rounded"></div>
-                </div>
+<div class="cv-container">
+    <aside class="sidebar">
+        <div style="width:100px; height:100px; background:#ddd; border-radius:50%; margin:0 auto 20px; border:3px solid var(--accent-color);"></div>
+        <h3>Contact</h3>
+        <p style="font-size:0.8rem;">
+            [cite_start]📞 0690794432 [cite: 8]<br>
+            [cite_start]✉️ Ayab6388@gmail.com [cite: 6]<br>
+            [cite_start]📍 Rabat [cite: 10]<br>
+            [cite_start]🎂 18 ANS [cite: 4]
+        </p>
+        <h3>Compétences</h3>
+        <ul style="font-size:0.8rem; padding-left:15px;">
+            [cite_start]<li>Bureautique [cite: 12]</li>
+            [cite_start]<li>Gestion de projet [cite: 14]</li>
+            [cite_start]<li>Esprit d'équipe [cite: 15]</li>
+        </ul>
+    </aside>
 
-                <div class="space-y-4">
-                    <h3 class="text-lg font-semibold uppercase tracking-wide border-b border-gray-500 pb-2 mb-4">Contact</h3>
-                    
-                    <div class="flex items-center space-x-3">
-                        <div class="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center flex-shrink-0">
-                            <i class="fas fa-envelope text-sm"></i>
-                        </div>
-                        <span class="text-sm break-all">baaliaya059@gmail.com</span>
-                    </div>
+    <main class="main-content">
+        [cite_start]<h1>Aya Baali [cite: 1, 2]</h1>
+        [cite_start]<div class="subtitle">Étudiante en Marketing Digital [cite: 20]</div>
 
-                    <div class="flex items-center space-x-3">
-                        <div class="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center flex-shrink-0">
-                            <i class="fas fa-phone text-sm"></i>
-                        </div>
-                        <span class="text-sm">06 90 79 44 32</span>
-                    </div>
+        <div class="section-title">Profil</div>
+        [cite_start]<p style="font-size:0.9rem;">[cite: 20, 21, 22] Passionnée par le commerce et la comptabilité, je cherche un stage pour approfondir mes compétences.</p>
 
-                    <div class="flex items-center space-x-3">
-                        <div class="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center flex-shrink-0">
-                            <i class="fas fa-map-marker-alt text-sm"></i>
-                        </div>
-                        <span class="text-sm">Rue 55 N 51 hay el farah, Rabat</span>
-                    </div>
-                    
-                    <div class="flex items-center space-x-3">
-                        <div class="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center flex-shrink-0">
-                            <i class="fas fa-birthday-cake text-sm"></i>
-                        </div>
-                        <span class="text-sm">18 Ans</span>
-                    </div>
-                </div>
+        <div class="section-title">Formation</div>
+        <p style="font-size:0.9rem;">
+            [cite_start]<strong>2024-2025:</strong> Marketing Digital - EST Salé [cite: 25, 26]<br>
+            [cite_start]<strong>2023-2024:</strong> Bac Science Économie [cite: 24]
+        </p>
 
-                <div class="mt-8 space-y-4">
-                    <h3 class="text-lg font-semibold uppercase tracking-wide border-b border-gray-500 pb-2 mb-4">Langues</h3>
-                    <div>
-                        <div class="flex justify-between text-sm mb-1">
-                            <span>Arabe</span>
-                            <span class="text-gray-300">Maternel</span>
-                        </div>
-                        <div class="w-full bg-gray-600 rounded-full h-1.5">
-                            <div class="bg-accent h-1.5 rounded-full" style="width: 100%"></div>
-                        </div>
-                    </div>
-                    <div>
-                        <div class="flex justify-between text-sm mb-1">
-                            <span>Français</span>
-                            <span class="text-gray-300">Courant</span>
-                        </div>
-                        <div class="w-full bg-gray-600 rounded-full h-1.5">
-                            <div class="bg-accent h-1.5 rounded-full" style="width: 85%"></div>
-                        </div>
-                    </div>
-                    <div>
-                        <div class="flex justify-between text-sm mb-1">
-                            <span>Anglais</span>
-                            <span class="text-gray-300">Moyen</span>
-                        </div>
-                        <div class="w-full bg-gray-600 rounded-full h-1.5">
-                            <div class="bg-accent h-1.5 rounded-full" style="width: 50%"></div>
-                        </div>
-                    </div>
-                </div>
+        <div class="section-title">Centres d'intérêt</div>
+        <div class="interest-section">
+            <ul id="interet-list">
+                [cite_start]<li>Voyage [cite: 28]</li>
+                [cite_start]<li>Sport [cite: 29]</li>
+                [cite_start]<li>Musique [cite: 30]</li>
+            </ul>
 
-                <div class="mt-8">
-                    <h3 class="text-lg font-semibold uppercase tracking-wide border-b border-gray-500 pb-2 mb-4">Intérêts</h3>
-                    <div class="flex flex-wrap gap-2">
-                        <span class="px-3 py-1 bg-white/10 rounded-full text-xs">Voyage</span>
-                        <span class="px-3 py-1 bg-white/10 rounded-full text-xs">Sport</span>
-                        <span class="px-3 py-1 bg-white/10 rounded-full text-xs">Musique</span>
-                    </div>
-                </div>
+            <div class="input-group">
+                <input type="text" id="userInput" placeholder="Ajouter un intérêt...">
+                <button class="add-btn" onclick="addNow()">+</button>
             </div>
-<h2>CV</h2>
 
-<a href="CV_Aya_Baali.pdf" target="_blank" style="text-decoration: none;">
-  <button>
-    📄 Mon CV
-  </button>
-</a>
-            <!-- Main Content -->
-            <div class="md:w-2/3 p-8 md:p-12">
-                
-                <!-- Profil -->
-                <section class="mb-10">
-                    <div class="flex items-center mb-4">
-                        <div class="w-10 h-10 rounded-full bg-blue-50 text-accent flex items-center justify-center mr-4">
-                            <i class="fas fa-user-circle text-xl"></i>
-                        </div>
-                        <h2 class="text-2xl font-bold text-primary uppercase">Profil</h2>
-                    </div>
-                    <p class="text-gray-600 leading-relaxed text-justify">
-                        Étudiante en deuxiéme année de marketing digital et commercial à l'École Supérieure de Technologie de Salé, je suis une personne motivée, sérieuse et dynamique, à la recherche d'un stage opérationnel pour approfondir mes compétences sur le terrain. Passionnée par les domaines du commerce et de la comptabilité, je souhaite contribuer activement aux missions d'une entreprise tout en développant mes capacités en gestion, relation client et bureautique. Dotée d'un bon esprit d'équipe, ponctuelle et flexible, je suis prête à relever de nouveaux défis professionnels.
-                    </p>
-                </section>
-
-                <hr class="border-gray-200 mb-10">
-
-                <!-- Formation -->
-                <section class="mb-10">
-                    <div class="flex items-center mb-6">
-                        <div class="w-10 h-10 rounded-full bg-blue-50 text-accent flex items-center justify-center mr-4">
-                            <i class="fas fa-graduation-cap text-xl"></i>
-                        </div>
-                        <h2 class="text-2xl font-bold text-primary uppercase">Formation</h2>
-                    </div>
-                    
-                    <div class="border-l-2 border-gray-200 ml-5 pl-8 space-y-8 relative">
-                        <!-- Item 1 -->
-                        <div class="relative">
-                            <div class="absolute -left-[41px] top-1 w-5 h-5 rounded-full border-4 border-white bg-accent shadow"></div>
-                            <h3 class="text-lg font-bold text-gray-800">Marketing Digital et Commercial</h3>
-                            <span class="text-sm font-semibold text-accent block mb-1">EST SALÉ | 2024 - 2025</span>
-                            <p class="text-gray-600">1ère année universitaire.</p>
-                        </div>
-                        
-                        <!-- Item 2 -->
-                        <div class="relative">
-                            <div class="absolute -left-[41px] top-1 w-5 h-5 rounded-full border-4 border-white bg-gray-400 shadow"></div>
-                            <h3 class="text-lg font-bold text-gray-800">Baccalauréat Sciences Économiques</h3>
-                            <span class="text-sm font-semibold text-accent block mb-1">Lycée | 2023 - 2024</span>
-                            <p class="text-gray-600">Obtention du baccalauréat.</p>
-                        </div>
-                    </div>
-                </section>
-
-                <hr class="border-gray-200 mb-10">
-
-                <!-- Compétences -->
-                <section>
-                    <div class="flex items-center mb-6">
-                        <div class="w-10 h-10 rounded-full bg-blue-50 text-accent flex items-center justify-center mr-4">
-                            <i class="fas fa-briefcase text-xl"></i>
-                        </div>
-                        <h2 class="text-2xl font-bold text-primary uppercase">Compétences</h2>
-                    </div>
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                        <h2>CV</h2>
-                    <h2>CV</h2>
-
-                    <h2>CV</h2>
-                        <!-- Soft Skills -->
-                        <div class="bg-gray-50 p-5 rounded-lg border border-gray-100">
-                            <h4 class="font-semibold text-gray-700 mb-4 flex items-center">
-                                <i class="fas fa-user-check text-accent mr-2"></i> Qualités Personnelles
-                            </h4>
-                            <ul class="space-y-2">
-                                <li class="flex items-center text-gray-600">
-                                    <i class="fas fa-check text-green-500 text-xs mr-2"></i> Esprit d'équipe
-                                </li>
-                                <li class="flex items-center text-gray-600">
-                                    <i class="fas fa-check text-green-500 text-xs mr-2"></i> Ponctuelle
-                                </li>
-                                <li class="flex items-center text-gray-600">
-                                    <i class="fas fa-check text-green-500 text-xs mr-2"></i> Flexible & Amicale
-                                </li>
-                                <li class="flex items-center text-gray-600">
-                                    <i class="fas fa-check text-green-500 text-xs mr-2"></i> Sérieuse & Dynamique
-                                </li>
-                            </ul>
-                        </div>
-
-                        <!-- Hard Skills -->
-                        <div class="bg-gray-50 p-5 rounded-lg border border-gray-100">
-                            <h4 class="font-semibold text-gray-700 mb-4 flex items-center">
-                                <i class="fas fa-laptop-code text-accent mr-2"></i> Compétences Techniques
-                            </h4>
-                            <ul class="space-y-2">
-                                <li class="flex items-center text-gray-600">
-                                    <i class="fas fa-file-word text-blue-600 text-sm mr-2"></i> Microsoft Word
-                                </li>
-                                <li class="flex items-center text-gray-600">
-                                    <i class="fas fa-file-powerpoint text-red-500 text-sm mr-2"></i> Microsoft PowerPoint
-                                </li>
-                                <li class="flex items-center text-gray-600">
-                                    <i class="fas fa-tasks text-gray-500 text-sm mr-2"></i> Gestion de projet
-                                </li>
-                                <li class="flex items-center text-gray-600">
-                                    <i class="fas fa-bullhorn text-yellow-500 text-sm mr-2"></i> Marketing Digital
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </section>
-
-            </div>
+            <a href="Cv_Aya_Baali.pdf" class="pdf-link-btn">
+                Cv_Aya_Baali.pdf
+            </a>
         </div>
-    </div>
+    </main>
+</div>
 
-    <!-- Footer pour impression -->
-    <div class="text-center text-gray-400 text-xs pb-10 print:hidden">
-        <p>CV généré pour Aya Baali</p>
-    </div>
+<script>
+    function addNow() {
+        var val = document.getElementById("userInput").value;
+        if(val.trim() !== "") {
+            var li = document.createElement("li");
+            li.textContent = val;
+            document.getElementById("interet-list").appendChild(li);
+            document.getElementById("userInput").value = "";
+        }
+    }
+</script>
 
 </body>
 </html>
