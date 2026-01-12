@@ -1,9 +1,9 @@
-!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CV Aya Baali</title>
+    <title>CV Aya Baali - 2ème Année</title>
     <style>
         :root {
             --primary-color: #2d3748;
@@ -30,7 +30,7 @@
             overflow: hidden;
         }
 
-        /* Sidebar - Jiha lissriya */
+        /* Sidebar - Gauche */
         .sidebar {
             width: 30%;
             background-color: var(--primary-color);
@@ -63,7 +63,7 @@
         .sidebar p, .sidebar li { font-size: 0.85rem; margin-bottom: 8px; list-style: none; }
         .sidebar ul { padding: 0; }
 
-        /* Main Content - Jiha limniya */
+        /* Main Content - Droite */
         .main-content {
             width: 70%;
             padding: 40px;
@@ -111,12 +111,11 @@
             font-weight: bold;
         }
 
-        /* BOUTON PDF - L-code li derti */
         .pdf-action-link {
             display: inline-block;
             margin-top: 15px;
             padding: 12px 25px;
-            background-color: #e53e3e; /* Loun hmer dial PDF */
+            background-color: #e53e3e;
             color: white !important;
             text-decoration: none !important;
             font-weight: bold;
@@ -144,23 +143,23 @@
         <h2>Contact</h2>
         <p>📞 0690794432</p>
         <p>✉️ baaliaya059@gmail.com</p>
-        <p>📍  Rabat,Maroc</p>
-        <p>🎂 18 ANS</p>
+        <p>📍 Rabat</p>
+        <p>🎂 19 ANS</p> <!-- Âge mis à jour -->
 
         <h2>Compétences</h2>
         <ul>
-            <li>Maitrise de la bureautique (Word, PPT)</li>
-            <li>Gestion des projets</li>
-            <li>Esprit d'équipe</li>
-            <li>Ponctuelle & Flexible</li>
-            <li>Amicale</li>
+            <li>Maîtrise bureautique (Office)</li>
+            <li>Gestion de projets digitaux</li>
+            <li>Esprit d'équipe & Collaboration</li>
+            <li>Ponctualité & Rigueur</li>
+            <li>Flexibilité & Adaptabilité</li>
         </ul>
 
         <h2>Langues</h2>
         <ul>
-            <li>Français: Moyen</li>
-            <li>Arabe: Maternel</li>
-            <li>Anglais:Courant</li>
+            <li>Français : Courant</li>
+            <li>Arabe : Maternel</li>
+            <li>Anglais : Moyen</li>
         </ul>
     </aside>
 
@@ -168,27 +167,65 @@
     <main class="main-content">
         <div class="header">
             <h1>AYA BAALI</h1>
-            <p>Étudiante en Marketing Digital et Commercial</p>
+            <p>Étudiante en 2ème année Marketing Digital et Commercial</p>
         </div>
 
         <div class="section-title">Profil</div>
         <p class="content-text">
-            Actuellement étudiante en deuxième année de Marketing Digital et Commercial à l'École Supérieure de Technologie de Salé. Je suis une personne motivée et sérieuse, passionnée par l'évolution des stratégies commerciales à l'ère du numérique. Mon parcours académique me permet de développer des compétences solides en gestion, relation client et outils digitaux. Dotée d'un bon esprit d'équipe, je suis prête à relever de nouveaux défis académiques et professionnels.
+            Actuellement étudiante en deuxième année de Marketing Digital et Commercial à l'École Supérieure de Technologie de Salé. 
+            Je suis une personne motivée et sérieuse, passionnée par l'évolution des stratégies commerciales à l'ère du numérique. 
+            Mon parcours académique me permet de développer des compétences solides en gestion, relation client et outils digitaux. 
+            Dotée d'un bon esprit d'équipe, je suis prête à relever de nouveaux défis académiques et professionnels.
         </p>
 
         <div class="section-title">Formation</div>
-        <div class="content-text"
+        <div class="content-text">
             <strong>• 2ème année en Marketing Digital et Commercial</strong><br>
             EST SALÉ | 2025 - Présent
         </div>
-            <strong>• 1ére année Marketing Digital et Commercial</strong><br>
-            EST SALÉ | 2024-2025
+        <div class="content-text">
+            <strong>• 1ère année en Marketing Digital et Commercial</strong><br>
+            EST SALÉ | 2024 - 2025
         </div>
         <div class="content-text">
             <strong>• BAC Science Économie</strong><br>
-            2023-2024
+            2023 - 2024
         </div>
 
+        <div class="section-title">Centres d'intérêt</div>
+        <ul id="interet-list" style="padding-left: 20px; margin-bottom: 20px;">
+            <li>Voyage</li>
+            <li>Sport</li>
+            <li>Musique</li>
+        </ul>
+        <!-- BOUTON PDF -->
+        <a href="CV_Aya_Baali.pdf" class="pdf-action-link">
+            📄 CV_Aya_Baali.pdf
+        </a>
+    </main>
+</div>
+
+<script>
+    function addItem() {
+        var input = document.getElementById("intInput");
+        var val = input.value;
+        if(val.trim() !== "") {
+            var li = document.createElement("li");
+            li.textContent = val;
+            document.getElementById("interet-list").appendChild(li);
+            input.value = "";
+        }
+    }
+
+    document.getElementById("intInput").addEventListener("keypress", function(e) {
+        if (e.key === "Enter") {
+            addItem();
+        }
+    });
+</script>
+
+</body>
+</html>
         <div class="section-title">Centres d'intérêt</div>
         <ul id="interet-list" style="padding-left: 20px; margin-bottom: 20px;">
             <li>Voyage</li>
